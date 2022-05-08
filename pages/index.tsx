@@ -1,25 +1,26 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
-import Canvas from "../components/Canvas";
+import GeneratedWords from "../components/GeneratedWords";
 import ControlButtons from "../components/ControlButtons";
 import Settings from "../components/Settings";
-import { generatePopulation } from "../genetic/population";
 import { MaxWidth } from "../styles/UIComponents/MaxWidth";
+import Creator from "../components/Creator";
+import { Hr } from "../styles/UIComponents/Hr";
 
 const Home: NextPage = () => {
-	// const pop = generatePopulation({ target: "barbora", membersCount: 200 });
 	return (
 		<Section>
 			<MaxWidth>
-				{/* <button onClick={() => pop.nextGeneration()}>
-					create next generation
-				</button> */}
 				<Container>
 					<MainLayout>
-						<Canvas />
-						<Settings />
+						<GeneratedWords />
+						<SideMenu>
+							<Settings />
+							<Hr />
+							<ControlButtons />
+							<Creator />
+						</SideMenu>
 					</MainLayout>
-					<ControlButtons />
 				</Container>
 			</MaxWidth>
 		</Section>
@@ -28,9 +29,17 @@ const Home: NextPage = () => {
 
 export default Home;
 
+const SideMenu = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin: 2rem 0 0;
+`;
+
 const MainLayout = styled.div`
 	display: flex;
 	flex: 1 1 80%;
+	height: 100%;
+	gap: 2rem;
 `;
 
 const Container = styled.div`

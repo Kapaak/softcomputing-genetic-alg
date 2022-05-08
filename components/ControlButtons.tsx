@@ -31,7 +31,6 @@ const ControlButtons = () => {
 
 	const handleNextGeneration = () => {
 		const newGeneration = nextGeneration(members, targetWord);
-		//next gen musi vracet {members:[], maxFitness:[]}
 		dispatch(updateMembers(newGeneration));
 		dispatch(updateGeneration());
 	};
@@ -44,7 +43,6 @@ const ControlButtons = () => {
 				<Button onClick={handleNextGeneration} disabled={!active}>
 					next generation
 				</Button>
-				<Button disabled={!active}>loop until top fitness</Button>
 			</div>
 		</SControlButtons>
 	);
@@ -55,6 +53,7 @@ export default ControlButtons;
 const SControlButtons = styled.div`
 	p {
 		font-weight: bold;
+		line-height: 1.7;
 	}
 
 	& > div {
@@ -62,5 +61,6 @@ const SControlButtons = styled.div`
 		align-items: center;
 		gap: 2rem;
 		flex: 1 1 20%;
+		margin-top: 0.8rem;
 	}
 `;

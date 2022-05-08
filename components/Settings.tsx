@@ -39,8 +39,8 @@ const Settings = () => {
 	};
 
 	return (
-		<div>
-			<h1>Settings</h1>
+		<SSetings>
+			<h2>Settings</h2>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<LabelInput>
 					<label>target word</label>
@@ -89,11 +89,13 @@ const Settings = () => {
 					</Button>
 				</Buttons>
 			</form>
-		</div>
+		</SSetings>
 	);
 };
 
 export default Settings;
+
+const SSetings = styled.div``;
 
 const Buttons = styled.div`
 	display: flex;
@@ -108,6 +110,7 @@ const LabelInput = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	height: 3.4rem;
 
 	label {
 		width: 10rem;
