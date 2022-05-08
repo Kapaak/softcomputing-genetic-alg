@@ -56,11 +56,11 @@ const Progress = styled.progress`
 	transform-origin: 100%;
 
 	&::-webkit-progress-bar {
-		background-color: #b4b3b3;
+		background-color: #fdb6b6;
 	}
 
 	&::-webkit-progress-value {
-		background-color: #31f531;
+		background-color: #5aee66;
 	}
 `;
 
