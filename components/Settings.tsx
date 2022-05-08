@@ -84,7 +84,7 @@ const Settings = () => {
 					<Button disabled={active} type="submit">
 						create new population
 					</Button>
-					<Button disabled={!active} onClick={onReset}>
+					<Button specialType={true} disabled={!active} onClick={onReset}>
 						reset
 					</Button>
 				</Buttons>

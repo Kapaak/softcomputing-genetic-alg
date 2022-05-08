@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const Button = styled.button<{ specialType?: boolean }>`
 	border: none;
 	padding: 1rem 1.4rem;
-	background-color: #ff6262;
+	background-color: ${({ specialType }) =>
+		specialType ? "#f7f1f1" : "#ff6262"};
 	box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
 		6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
 		12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
@@ -16,7 +17,8 @@ export const Button = styled.button`
 	cursor: pointer;
 
 	&:hover {
-		background-color: #fa7b7b;
+		background-color: ${({ specialType }) =>
+			specialType ? "#e7e0e0" : "#fa7b7b"};
 	}
 
 	&:active {
