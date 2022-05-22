@@ -28,8 +28,8 @@ const GeneratedWords = () => {
 			<Container>
 				<ul>
 					{members &&
-						members.map(member => {
-							return <li>{member.genome}</li>;
+						members.map((member, index) => {
+							return <li key={index}>{member.genome}</li>;
 						})}
 				</ul>
 				{active && <Progress max="100" value={maxFitness * 100} />}
